@@ -4,6 +4,6 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "azurerm_resource_group" "example1" {
-  name     = "sFs_org1"
+  name     = "SFS_org1"
   location = "East US"
 }
