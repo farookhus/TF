@@ -26,10 +26,10 @@ PARAMETERS
   }
 }
 
-data "azurerm_subscription" "current" {}
+/* data "azurerm_subscription" "current" {}
 
 resource "azurerm_subscription_policy_assignment" "sfspolicysetdifinition-assignment" {
   name                 = "sgfpolicysetdifinition-assignment"
   policy_definition_id = azurerm_policy_definition.sfspolicysetdifinition.id
   subscription_id      = data.azurerm_subscription.current.id
-}
+} */
