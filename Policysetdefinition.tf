@@ -1,7 +1,7 @@
-resource "azurerm_policy_set_definition" "sgfpolicysetdifinition" {
-  name         = "sgfpolicysetdifinition"
+resource "azurerm_policy_set_definition" "sfspolicysetdifinition" {
+  name         = "sfspolicysetdifinition"
   policy_type  = "Custom"
-  display_name = "sgfpolicysetdifinition"
+  display_name = "sfspolicysetdifinition"
 
   parameters = <<PARAMETERS
     {
@@ -28,8 +28,8 @@ PARAMETERS
 
 data "azurerm_subscription" "current" {}
 
-resource "azurerm_subscription_policy_assignment" "sgfpolicysetdifinition-assignment" {
+resource "azurerm_subscription_policy_assignment" "sfspolicysetdifinition-assignment" {
   name                 = "sgfpolicysetdifinition-assignment"
-  policy_definition_id = azurerm_policy_definition.exsgfpolicysetdifinitionample.id
+  policy_definition_id = azurerm_policy_definition.sfspolicysetdifinition.id
   subscription_id      = data.azurerm_subscription.current.id
 }
