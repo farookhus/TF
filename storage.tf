@@ -1,4 +1,4 @@
 resource "azurerm_resource_group" "example" {
-  name     = "SFS_org"
+  name     = "sFs_org"
   location = "East US"
 }
