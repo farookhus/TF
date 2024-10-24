@@ -3,7 +3,7 @@ resource "azurerm_resource_group" "example" {
   location = "East US"
 }
 
-resource "azurerm_resource_group" "example" {
+resource "azurerm_resource_group" "example1" {
   name     = "sFs_org1"
   location = "East US"
 }
