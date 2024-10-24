@@ -1,7 +1,7 @@
-resource "azurerm_policy_set_definition" "sfspolicysetdifinition" {
-  name         = "sfspolicysetdifinition"
+resource "azurerm_policy_set_definition" "sfspolicydefinitionset" {
+  name         = "sfspolicydefinitionset"
   policy_type  = "Custom"
-  display_name = "sfspolicysetdifinition"
+  display_name = "sfspolicydefinitionset"
 
   parameters = <<PARAMETERS
     {
@@ -17,7 +17,7 @@ resource "azurerm_policy_set_definition" "sfspolicysetdifinition" {
 PARAMETERS
 
   policy_definition_reference {
-    policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/9ea02ca2-71db-412d-8b00-7c7ca9fcd32d"
+    policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/e765b5de-1225-4ba3-bd56-1ac6695af988"
     parameter_values     = <<VALUE
     {
       "listOfAllowedLocations": {"value": "[parameters('allowedLocations')]"}
@@ -25,11 +25,3 @@ PARAMETERS
     VALUE
   }
 }
-
-/* data "azurerm_subscription" "current" {}
-
-resource "azurerm_subscription_policy_assignment" "sfspolicysetdifinition-assignment" {
-  name                 = "sgfpolicysetdifinition-assignment"
-  policy_definition_id = azurerm_policy_definition.sfspolicysetdifinition.id
-  subscription_id      = data.azurerm_subscription.current.id
-} */
