@@ -21,7 +21,7 @@ resource "azapi_resource" "sfs_defender" {
       isEnabled = true
       malwareScanning = {
         onUpload = {
-          capGBPerMonth = -1
+          capGBPerMonth = 1
           isEnabled = true
         }
         scanResultsEventGridTopicResourceId = "test"
