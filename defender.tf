@@ -17,17 +17,17 @@ resource "azapi_resource" "sfs_defender" {
   name = "sfs_defender"
   body = jsonencode({
     properties = {
-      isEnabled = bool
+      isEnabled = true
       malwareScanning = {
         onUpload = {
-          capGBPerMonth = int
-          isEnabled = bool
+          capGBPerMonth = -1
+          isEnabled = true
         }
-        scanResultsEventGridTopicResourceId = "string"
+        scanResultsEventGridTopicResourceId = "test"
       }
-      overrideSubscriptionLevelSettings = bool
+      overrideSubscriptionLevelSettings = true
       sensitiveDataDiscovery = {
-        isEnabled = bool
+        isEnabled = true
       }
     }
   })
