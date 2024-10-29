@@ -11,7 +11,7 @@ resource "azurerm_storage_account" "sfs_defender" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
-resource "azapi_resource_action" "enable_defender_for_Storage" {
+/* resource "azapi_resource_action" "enable_defender_for_Storage" {
   type        = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
   resource_id = "${azurerm_storage_account.sfs_defender.id}/providers/Microsoft.Security/defenderForStorageSettings/current"
   method      = "PUT"
@@ -31,4 +31,4 @@ resource "azapi_resource_action" "enable_defender_for_Storage" {
       overrideSubscriptionLevelSettings = true
     }
   })
-}
+} */
