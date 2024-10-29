@@ -12,7 +12,7 @@ resource "azurerm_storage_account" "sfs_defender" {
   account_replication_type = "LRS"
 }
 
-resource "azapi_resource" "sfs_defender" {
+/* resource "azapi_resource" "sfs_defender" {
   type = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
   name = "sfs_defender"
   parent_id = azurerm_storage_account.sfs_defender.id
@@ -32,4 +32,9 @@ resource "azapi_resource" "sfs_defender" {
       }
     }
   })
+} */
+
+
+resource "azurerm_security_center_storage_defender" "sfs_defender" {
+  storage_account_id = azurerm_storage_account.sfs_defender.id
 }
