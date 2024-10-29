@@ -74,7 +74,7 @@ resource "azapi_resource" "my_management_group_action" {
 
 
 resource "azapi_resource" "defender_storage" {
-  type     = "Microsoft.Security/autoProvisioningSettings"
+  type     = "Microsoft.Security/autoProvisioningSettings@2017-08-01-preview"
   name     = "default"
   parent_id   = "/providers/Microsoft.Management/managementGroups/Farook-mgmt"
 
