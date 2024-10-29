@@ -12,7 +12,7 @@ resource "azurerm_storage_account" "sfsdefender" {
   account_replication_type = "LRS"
 }
 
-resource "azapi_update_resource" "sfsdefender" {
+/* resource "azapi_update_resource" "sfsdefender" {
   type = "Microsoft.Storage/storageAccounts@2021-09-01"
   resource_id = azurerm_storage_account.sfsdefender.id
 
@@ -21,7 +21,7 @@ resource "azapi_update_resource" "sfsdefender" {
       DnsEndpointType = "AzureDnsZone"
     }
   }
-}
+} */
 
 
   resource "azapi_update_resource" "sfsdefender" {
