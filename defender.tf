@@ -45,7 +45,7 @@ resource "azapi_resource_action" "enable_defender_for_Storage" {
   resource_id = "${azurerm_storage_account.sfsdefender.id}/providers/Microsoft.Security/defenderForStorageSettings/current"
   method      = "PUT"
 
-  body = jsonencode({
+  body = {
     properties = {
       isEnabled = false
       malwareScanning = {
@@ -59,7 +59,7 @@ resource "azapi_resource_action" "enable_defender_for_Storage" {
       }
       overrideSubscriptionLevelSettings = false
     }
-  })
+  }
 }
 
 /* resource "azurerm_security_center_storage_defender" "sfs_defender" {
