@@ -1,21 +1,3 @@
- terraform {
-   required_providers {
-     azapi = {
-       source = "Azure/azapi"
-     }
-         azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "=4.1.0"
-    }
-   }
- }
-
- provider "azapi" {
- }
-
- provider "azurerm" {
-   features {}
- }
 
  resource "azurerm_resource_group" "sfs_defender" {
    name     = "sfs_defender"
