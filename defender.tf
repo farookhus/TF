@@ -78,7 +78,7 @@ resource "azapi_resource" "defender_storage" {
   name     = "default"
   parent_id   = "/providers/Microsoft.Management/managementGroups/Farook-mgmt"
 
-  body = jsonencode({
+  body = {
     properties = {
       autoProvision      = "On"
       autoProvisioning   = {
@@ -93,7 +93,7 @@ resource "azapi_resource" "defender_storage" {
         }
       }
     }
-  })
+  }
 }
 
 /* resource "azapi_update_resource" "enable_defender_for_Storage_Update" {
