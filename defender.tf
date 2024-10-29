@@ -15,7 +15,7 @@ resource "azurerm_storage_account" "sfsdefender" {
 resource "azapi_resource" "sfsdefender" {
   type = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
   name = "sfsdefender"
-  parent_id = azurerm_resource_group.sfsdefender.id
+  parent_id = "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab"
   body = {
     properties = {
       isEnabled = false
