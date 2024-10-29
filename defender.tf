@@ -40,7 +40,7 @@ resource "azurerm_security_center_subscription_pricing" "sfsdefender" {
   }
 }
  */
-resource "azapi_resource_action" "enable_defender_for_Storage" {
+/* resource "azapi_resource_action" "enable_defender_for_Storage" {
   type        = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
   resource_id = "${azurerm_storage_account.sfsdefender.id}/providers/Microsoft.Security/defenderForStorageSettings/current"
   method      = "PUT"
@@ -62,7 +62,41 @@ resource "azapi_resource_action" "enable_defender_for_Storage" {
   }
 }
 
-resource "azapi_update_resource" "enable_defender_for_Storage_Update" {
+resource "azapi_resource" "my_management_group_action" {
+
+  type = "Microsoft.Management/managementGroups"  
+
+  parent_id = "your_management_group_id" 
+
+  # Other properties specific to the action you want to perform
+
+} */
+
+
+resource "azapi_resource" "defender_storage" {
+  type     = "Microsoft.Security/autoProvisioningSettings"
+  name     = "default"
+  parent_id   = "/providers/Microsoft.Management/managementGroups/Farook-mgmt"
+
+  body = jsonencode({
+    properties = {
+      autoProvision      = "On"
+      autoProvisioning   = {
+        "Enabled" : true
+        "Settings" : {
+          "dataCollection" = {
+            "enabled" : true
+          }
+          "storageAccounts" = {
+            "enabled" : true  # Enable Defender for Storage
+          }
+        }
+      }
+    }
+  })
+}
+
+/* resource "azapi_update_resource" "enable_defender_for_Storage_Update" {
    type        = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
    #resource_id = "${azurerm_storage_account.sfsdefender.id}/providers/Microsoft.Security/defenderForStorageSettings/current"
    parent_id   = "/providers/Microsoft.Management/managementGroups/Farook-mgmt"
@@ -83,7 +117,7 @@ resource "azapi_update_resource" "enable_defender_for_Storage_Update" {
     }
   }
  }
-
+ */
 /* resource "azurerm_security_center_storage_defender" "sfs_defender" {
   storage_account_id = azurerm_storage_account.sfs_defender.id
 } */
