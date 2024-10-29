@@ -12,6 +12,12 @@ resource "azurerm_storage_account" "sfsdefender" {
   account_replication_type = "LRS"
 }
 
+resource "azurerm_security_center_subscription_pricing" "sfsdefender" {
+  tier          = "Standard"
+  resource_type = "StorageAccounts"
+  subplan       = "DefenderForStorageV2"
+}
+
 resource "azapi_resource" "sfsdefender" {
   type = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
   name = "sfsdefender"
