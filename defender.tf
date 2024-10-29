@@ -81,7 +81,7 @@ resource "azapi_resource" "defender_storage" {
   body = {
     properties = {
       autoProvision      = "On"
-      autoProvisioning   = {
+      autoProvision   = {
         "Enabled" : true
         "Settings" : {
           "dataCollection" = {
