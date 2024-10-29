@@ -62,6 +62,27 @@ resource "azapi_resource_action" "enable_defender_for_Storage" {
   }
 }
 
+resource "azapi_update_resource" "enable_defender_for_Storage_Update" {
+   type        = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
+   resource_id = "${azurerm_storage_account.sfsdefender.id}/providers/Microsoft.Security/defenderForStorageSettings/current"
+
+  body = {
+    properties = {
+      isEnabled = false
+      malwareScanning = {
+        onUpload = {
+          isEnabled     = false
+          capGBPerMonth = -1
+        }
+      }
+      sensitiveDataDiscovery = {
+        isEnabled = false
+      }
+      overrideSubscriptionLevelSettings = true
+    }
+  }
+ }
+ 
 /* resource "azurerm_security_center_storage_defender" "sfs_defender" {
   storage_account_id = azurerm_storage_account.sfs_defender.id
 } */
