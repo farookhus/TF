@@ -12,9 +12,10 @@ resource "azurerm_storage_account" "sfs_defender" {
   account_replication_type = "LRS"
 }
 
-resource "azapi_resource" "sfsdefender" {
+resource "azapi_resource" "sfs_defender" {
   type = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
-  name = "sfsdefender"
+  name = "sfs_defender"
+  parent_id = azurerm_resource_group.sfs_defender.id
   body = jsonencode({
     properties = {
       isEnabled = true
