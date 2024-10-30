@@ -66,6 +66,7 @@ resource "azurerm_security_center_subscription_pricing" "sfsdefender" {
 
 resource "azapi_resource" "test" {
   type = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
+  parent_id = azurerm_resource_group.sfsdefender.id
   body = {properties = {
     isEnabled = false
   }} 
