@@ -40,29 +40,42 @@ resource "azurerm_security_center_subscription_pricing" "sfsdefender" {
   }
 }
  */
-/* resource "azapi_resource_action" "enable_defender_for_Storage" {
-  type        = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
-  resource_id = "${azurerm_storage_account.sfsdefender.id}/providers/Microsoft.Security/defenderForStorageSettings/current"
-  method      = "PUT"
+ 
+# resource "azapi_resource_action" "enable_defender_for_Storage" {
+#   type        = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
+#   #resource_id = "${azurerm_storage_account.sfsdefender.id}/providers/Microsoft.Security/defenderForStorageSettings/current"
+#   resource_id = "${azurerm_storage_account.sfsdefender.id}/providers/Microsoft.Security/defenderForStorageSettings/current"
+#   method      = "PUT"
   
-  body = {
-    properties = {
-      isEnabled = false
-      malwareScanning = {
-        onUpload = {
-          isEnabled     = false
-          capGBPerMonth = -1
-        }
-      }
-      sensitiveDataDiscovery = {
-        isEnabled = false
-      }
-      overrideSubscriptionLevelSettings = false
-    }
-  }
+#   body = {
+#     properties = {
+#       isEnabled = false
+#       malwareScanning = {
+#         onUpload = {
+#           isEnabled     = false
+#           capGBPerMonth = -1
+#         }
+#       }
+#       sensitiveDataDiscovery = {
+#         isEnabled = false
+#       }
+#       overrideSubscriptionLevelSettings = false
+#     }
+#   }
+# }
+
+resource "azapi_resource" "test" {
+  type = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
+  body = jsonencode(
+    {properties = {
+      isEnabled = true
+    }}
+  )
+  
 }
 
-resource "azapi_resource" "my_management_group_action" {
+
+/* resource "azapi_resource" "my_management_group_action" {
 
   type = "Microsoft.Management/managementGroups"  
 
@@ -70,31 +83,8 @@ resource "azapi_resource" "my_management_group_action" {
 
   # Other properties specific to the action you want to perform
 
-} */
-
-
-resource "azapi_resource" "defender_storage" {
-  type     = "Microsoft.Security/autoProvisioningSettings@2017-08-01-preview"
-  name     = "default"
-  parent_id   = "/providers/Microsoft.Management/managementGroups/Farook-mgmt"
-
-  body = {
-    properties = {
-      autoProvision      = "On"
-      autoProvision   = {
-        "Enabled" : true
-        "Settings" : {
-          "dataCollection" = {
-            "enabled" : true
-          }
-          "storageAccounts" = {
-            "enabled" : true  # Enable Defender for Storage
-          }
-        }
-      }
-    }
-  }
 }
+ */
 
 /* resource "azapi_update_resource" "enable_defender_for_Storage_Update" {
    type        = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
