@@ -68,6 +68,7 @@ resource "azapi_resource" "test" {
   type = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
   name = "default"
   parent_id = "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab"
+  schema_validation_enabled = false
   body = {properties = {
     isEnabled = true
   }} 
