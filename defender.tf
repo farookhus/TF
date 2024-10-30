@@ -78,7 +78,7 @@ resource "azapi_resource" "storagetest1" {
 
 type = "Microsoft.Storage/storageAccounts@2023-05-01"
 name = "defaultstorage"
-parent_id = "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab"
+parent_id = azurerm_resource_group.sfsdefender.id
 location = "eastus"
 body = {
   kind = "StorageV2"
