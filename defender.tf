@@ -64,12 +64,12 @@ resource "azurerm_security_center_subscription_pricing" "sfsdefender" {
 #   }
 # }
 
-resource "azapi_resource" "test" {
+/* resource "azapi_resource" "test" {
   type = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
   name = "default"
   parent_id = "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab"
   body = {properties = {
-    isEnabled = false
+    isEnabled = true
   }} 
   
 }
@@ -88,7 +88,14 @@ body = {
   }
 }
 
-
+resource "azapi_resource" "symbolicname" {
+  type = "Microsoft.Security/autoProvisioningSettings@2017-08-01-preview"
+  name = "string"
+  body = {properties = {
+    autoProvision = "On"
+      
+  }}
+} */
 
 /* resource "azapi_resource" "my_management_group_action" {
 
