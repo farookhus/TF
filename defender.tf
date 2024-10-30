@@ -77,7 +77,7 @@ resource "azapi_resource" "test" {
 resource "azapi_resource" "storagetest1" {
 
 type = "Microsoft.Storage/storageAccounts@2023-05-01"
-name = "defaultstorage"
+name = "sfsdefaultstorage01"
 parent_id = azurerm_resource_group.sfsdefender.id
 location = "eastus"
 body = {
