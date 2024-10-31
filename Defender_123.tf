@@ -1,5 +1,5 @@
 
-resource "azurerm_subscription_template_deployment" "vmpricing" {
+/* resource "azurerm_subscription_template_deployment" "vmpricing" {
   name             = "vmpricing"
   location         = "East US"
   template_content = <<TEMPLATE
@@ -52,4 +52,4 @@ resource "azurerm_management_group_template_deployment" "vmpricingmgmt" {
 
 TEMPLATE
 
-}
+} */

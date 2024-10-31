@@ -1,8 +1,8 @@
 
- resource "azurerm_resource_group" "sfsdefender" {
+/*  resource "azurerm_resource_group" "sfsdefender" {
    name     = "sfsdefender"
    location = "East US"
- }
+ } */
 
 /* resource "azurerm_storage_account" "sfsdefender" {
   name                     = "sfsdefenderstorage"
