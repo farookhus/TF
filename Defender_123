@@ -3,31 +3,25 @@ resource "azurerm_subscription_template_deployment" "armtemplate" {
   location         = "East US"
   template_content = <<TEMPLATE
   
-  {
-    "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {},
-    "functions": [],
-    "variables": {},
-    "resources": [
-     {
-  "type": "Microsoft.Security/pricings",
-  "apiVersion": "2023-01-01",
-  "name": "VirtualMachines",
-  "properties": {
-    "enforce": "True",
-    "extensions": [
-      {
-        "isEnabled": "False",
-        "name": "AgentlessVmScanning"
-      }
-    ],
-    "pricingTier": "Standard",
-    "subPlan": "P1"
-  }
+variable "subscriptionId" {
+  type        = string
+  description = "The subscription id"
 }
-    ],
-    "outputs": {}
+
+variable "resourceGroupName" {
+  type        = string
+  description = "The resource group name"
+}
+
+resource "azapi_resource" "pricing" {
+  type      = "Microsoft.Security/pricings@2024-01-01"
+  parent_id = "/subscriptions/${var.subscriptionId}/resourceGroups/${var.resourceGroupName}"
+  name      = "VirtualMachines"
+  body = {
+    properties = {
+      pricingTier = "Standard"
+    }
+  }
 }
 TEMPLATE
 
