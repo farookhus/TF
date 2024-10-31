@@ -14,8 +14,7 @@ resource "azurerm_subscription_template_deployment" "cspm" {
        "apiVersion": "2023-01-01",
        "name":"CloudPosture",
        "properties": {
-            "pricingTier": "Standard",
-            "subPlan": "P2"
+            "pricingTier": "Standard"   
           }
      },
                {
@@ -23,8 +22,7 @@ resource "azurerm_subscription_template_deployment" "cspm" {
        "apiVersion": "2023-01-01",
        "name":"VirtualMachines",
        "properties": {
-            "pricingTier": "Standard",
-            "subPlan": "P1"
+            "pricingTier": "Standard"
           }
      },
      {
@@ -32,8 +30,7 @@ resource "azurerm_subscription_template_deployment" "cspm" {
        "apiVersion": "2023-01-01",
        "name":"AppServices",
        "properties": {
-            "pricingTier": "Standard",
-            "subPlan": "P1"
+            "pricingTier": "Standard"
           }
      }
         ]            
