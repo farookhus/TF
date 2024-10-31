@@ -16,15 +16,7 @@ resource "azurerm_subscription_template_deployment" "cspm" {
        "properties": {
             "pricingTier": "Standard"   
           }
-     },
-               {
-      "type": "Microsoft.Security/pricings",
-       "apiVersion": "2023-01-01",
-       "name":"VirtualMachines",
-       "properties": {
-            "pricingTier": "Standard"
-          }
-     },
+     }
      {
       "type": "Microsoft.Security/pricings",
        "apiVersion": "2023-01-01",
