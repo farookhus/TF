@@ -4,19 +4,19 @@
    location = "East US"
  }
 
-resource "azurerm_storage_account" "sfsdefender" {
+/* resource "azurerm_storage_account" "sfsdefender" {
   name                     = "sfsdefenderstorage"
   resource_group_name      = azurerm_resource_group.sfsdefender.name
   location                 = azurerm_resource_group.sfsdefender.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
-}
+} */
 
-resource "azurerm_security_center_subscription_pricing" "sfsdefender" {
+/* resource "azurerm_security_center_subscription_pricing" "sfsdefender" {
   tier          = "Standard"
   resource_type = "StorageAccounts"
   subplan       = "DefenderForStorageV2"
-}
+} */
 
 /* resource "azapi_resource" "sfsdefender" {
   type = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
@@ -64,7 +64,7 @@ resource "azurerm_security_center_subscription_pricing" "sfsdefender" {
 #   }
 # }
 
-resource "azapi_resource" "test" {
+/* resource "azapi_resource" "test" {
   type = "Microsoft.Security/defenderForStorageSettings@2022-12-01-preview"
   name = "default"
   parent_id = "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab"
@@ -74,7 +74,7 @@ resource "azapi_resource" "test" {
   }} 
   
 }
-
+ */
 /* resource "azapi_resource" "storagetest1" {
 
 type = "Microsoft.Storage/storageAccounts@2023-05-01"
