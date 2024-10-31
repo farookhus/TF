@@ -31,7 +31,7 @@ data "azurerm_management_group" "vmpricingmgmt" {
 resource "azurerm_management_group_template_deployment" "vmpricingmgmt" {
   name                = "vmpricingmgmt"
   location            = "East US"
-  management_group_id = data.azurerm_management_group.example.id
+  management_group_id = data.azurerm_management_group.vmpricingmgmt.id
   template_content = <<TEMPLATE
 
 {
