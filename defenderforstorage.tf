@@ -1,0 +1,37 @@
+resource "azurerm_subscription_template_deployment" "armtemplatestorage" {
+  name             = "armtemplatestorage"
+  location         = "East US"
+  template_content = <<TEMPLATE
+
+{
+  "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "functions": [],
+  "variables": {},
+  "resources": [
+      {
+"type": "Microsoft.Security/defenderForStorageSettings",
+"apiVersion": "2022-12-01-preview",
+"name": "current",
+"properties": {
+  "isEnabled": "True",
+  "malwareScanning": {
+    "onUpload": {
+      "capGBPerMonth": "-1",
+      "isEnabled": "true"
+    },
+    "scanResultsEventGridTopicResourceId": "eventstorage"
+  },
+  "overrideSubscriptionLevelSettings": "false",
+  "sensitiveDataDiscovery": {
+    "isEnabled": "false"
+  }
+}
+}
+  ],
+  "outputs": {}
+}
+TEMPLATE
+
+}
