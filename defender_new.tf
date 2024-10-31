@@ -1,4 +1,4 @@
-resource "azapi_resource" "df" {
+/* resource "azapi_resource" "df" {
   type = "Microsoft.Security/pricings@2024-01-01"
   parent_id = "/providers/Microsoft.Management/managementGroups/Farook-mgmt"
   name = "StorageAccounts"
@@ -15,3 +15,4 @@ resource "azapi_resource" "dfvm" {
     pricingTier = "Standard"       
   }}
     }    
+ */
