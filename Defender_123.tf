@@ -1,5 +1,5 @@
 resource "azurerm_subscription_template_deployment" "armtemplate" {
-  name             = "example-deployment"
+  name             = "armtemplate"
   location         = "East US"
   template_content = <<TEMPLATE
   
@@ -15,10 +15,10 @@ resource "azurerm_subscription_template_deployment" "armtemplate" {
   "apiVersion": "2023-01-01",
   "name": "VirtualMachines",
   "properties": {
-    "enforce": "string",
+    "enforce": "True",
     "extensions": [
       {
-        "isEnabled": "True",
+        "isEnabled": "False",
         "name": "AgentlessVmScanning"
       }
     ],
