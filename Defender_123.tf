@@ -13,7 +13,7 @@ resource "azurerm_subscription_template_deployment" "armtemplate" {
      {
   "type": "Microsoft.Security/pricings",
   "apiVersion": "2023-01-01",
-  "name": "AgentlessVmScanning",
+  "name": "VirtualMachines",
   "properties": {
     "enforce": "string",
     "extensions": [
