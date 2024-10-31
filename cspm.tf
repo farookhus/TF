@@ -9,14 +9,6 @@ resource "azurerm_subscription_template_deployment" "cspm" {
     "functions": [],
     "variables": {},
     "resources": [
-          {
-      "type": "Microsoft.Security/pricings",
-       "apiVersion": "2023-01-01",
-       "name":"CloudPosture",
-       "properties": {
-            "pricingTier": "Standard"   
-          }
-     }
      {
       "type": "Microsoft.Security/pricings",
        "apiVersion": "2023-01-01",
