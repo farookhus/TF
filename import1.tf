@@ -2,6 +2,7 @@ resource "azurerm_subscription_template_deployment" "cspm" {
   name             = "cspm"
   location         = "East US"
   template_content = <<TEMPLATE
+
 {
     "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
@@ -17,22 +18,22 @@ resource "azurerm_subscription_template_deployment" "cspm" {
         "extensions": [
                   {
           "isEnabled": "True",
-          "name": "MdeDesignatedSubscription",
+          "name": "MdeDesignatedSubscription"
         },
         {
           "isEnabled": "True",
-          "name": "AgentlessVmScanning",
+          "name": "AgentlessVmScanning"
         },
         {
           "isEnabled": "True",
-          "name": "FileIntegrityMonitoring",
+          "name": "FileIntegrityMonitoring"
         }
         ],
         "subPlan": "P2",
         "pricingTier": "Standard"
       }
-    }
-        ],           
-     }   
+      }
+     ]          
+   }   
 TEMPLATE
 }
