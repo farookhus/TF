@@ -32,7 +32,7 @@ resource "azurerm_subscription_template_deployment" "cspm" {
         "pricingTier": "Standard"
       }
     }
-        ]            
+        ],           
      }   
 TEMPLATE
 }
