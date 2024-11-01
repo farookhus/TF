@@ -10,24 +10,27 @@ resource "azurerm_subscription_template_deployment" "cspm" {
     "variables": {},
     "resources": [
     {
-      "extensions": [
-        {
-          "isEnabled": "False",
+      "name": "VirtualMachines",
+      "type": "Microsoft.Security/pricings",
+      "apiVersion": "2023-01-01",
+      "properties": {
+        "extensions": [
+                  {
+          "isEnabled": "True",
           "name": "MdeDesignatedSubscription",
         },
         {
-          "isEnabled": "False",
+          "isEnabled": "True",
           "name": "AgentlessVmScanning",
         },
         {
-          "isEnabled": "False",
+          "isEnabled": "True",
           "name": "FileIntegrityMonitoring",
         }
-      ],
-      "name": "VirtualMachines",
-      "pricingTier": "Standard",
-      "subPlan": "P2",
-      "type": "Microsoft.Security/pricings"
+        ],
+        "subPlan": "P2",
+        "pricingTier": "Standard"
+      }
     }
         ]            
      }   
