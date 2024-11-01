@@ -7,6 +7,43 @@ resource "azurerm_security_center_subscription_pricing" "pricingvm" {
 resource "azurerm_security_center_subscription_pricing" "pricingcp" {
   tier          = "Standard"
   resource_type = "CloudPosture"
+
+  extension {
+    name = "AgentlessDiscoveryForKubernetes"
+  }
+
+  extension {
+    name = "OnUploadMalwareScanning"
+    }
+  
+  extension {
+    name = "SensitiveDataDiscovery"
+  }
+
+  extension {
+    name = "MdeDesignatedSubscription"
+  }
+
+  extension {
+    name = "AgentlessVmScanning"
+  }
+
+    extension {
+    name = "EntraPermissionsManagement"
+  }
+
+    extension {
+    name = "FileIntegrityMonitoring"
+  }
+
+    extension {
+    name = "ContainerSensor"
+  }
+
+      extension {
+    name = "AIPromptEvidence"
+  }
+
 }
 
 /* resource "azurerm_subscription_template_deployment" "cspm" {
