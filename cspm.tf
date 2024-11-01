@@ -36,9 +36,9 @@ resource "azurerm_security_center_subscription_pricing" "pricingcp" {
 #     name = "FileIntegrityMonitoring"
 #   }
 
-    extension {
-    name = "ContainerSensor"
-  }
+#     extension {
+#     name = "ContainerSensor"
+#   }
 
 #       extension {
 #     name = "AIPromptEvidence"
