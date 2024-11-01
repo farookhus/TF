@@ -1,0 +1,244 @@
+{
+  "value": [
+    {
+      "deprecated": null,
+      "enablementTime": "2024-11-01T00:50:05.961108+00:00",
+      "extensions": [
+        {
+          "additionalExtensionProperties": null,
+          "isEnabled": "False",
+          "name": "MdeDesignatedSubscription",
+          "operationStatus": null
+        },
+        {
+          "additionalExtensionProperties": {
+            "ExclusionTags": "[]"
+          },
+          "isEnabled": "False",
+          "name": "AgentlessVmScanning",
+          "operationStatus": null
+        },
+        {
+          "additionalExtensionProperties": null,
+          "isEnabled": "False",
+          "name": "FileIntegrityMonitoring",
+          "operationStatus": null
+        }
+      ],
+      "freeTrialRemainingTime": "28 days, 23:20:00",
+      "id": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/VirtualMachines",
+      "name": "VirtualMachines",
+      "pricingTier": "Standard",
+      "replacedBy": null,
+      "subPlan": "P2",
+      "type": "Microsoft.Security/pricings"
+    },
+    {
+      "deprecated": null,
+      "enablementTime": null,
+      "extensions": null,
+      "freeTrialRemainingTime": "30 days, 0:00:00",
+      "id": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/SqlServers",
+      "name": "SqlServers",
+      "pricingTier": "Free",
+      "replacedBy": null,
+      "subPlan": null,
+      "type": "Microsoft.Security/pricings"
+    },
+    {
+      "deprecated": null,
+      "enablementTime": null,
+      "extensions": null,
+      "freeTrialRemainingTime": "30 days, 0:00:00",
+      "id": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/AppServices",
+      "name": "AppServices",
+      "pricingTier": "Free",
+      "replacedBy": null,
+      "subPlan": null,
+      "type": "Microsoft.Security/pricings"
+    },
+    {
+      "deprecated": null,
+      "enablementTime": null,
+      "extensions": null,
+      "freeTrialRemainingTime": "27 days, 11:42:00",
+      "id": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/StorageAccounts",
+      "name": "StorageAccounts",
+      "pricingTier": "Free",
+      "replacedBy": null,
+      "subPlan": null,
+      "type": "Microsoft.Security/pricings"
+    },
+    {
+      "deprecated": null,
+      "enablementTime": null,
+      "extensions": null,
+      "freeTrialRemainingTime": "30 days, 0:00:00",
+      "id": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/SqlServerVirtualMachines",
+      "name": "SqlServerVirtualMachines",
+      "pricingTier": "Free",
+      "replacedBy": null,
+      "subPlan": null,
+      "type": "Microsoft.Security/pricings"
+    },
+    {
+      "deprecated": true,
+      "enablementTime": null,
+      "extensions": null,
+      "freeTrialRemainingTime": "30 days, 0:00:00",
+      "id": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/KubernetesService",
+      "name": "KubernetesService",
+      "pricingTier": "Free",
+      "replacedBy": [
+        "Containers"
+      ],
+      "subPlan": null,
+      "type": "Microsoft.Security/pricings"
+    },
+    {
+      "deprecated": true,
+      "enablementTime": null,
+      "extensions": null,
+      "freeTrialRemainingTime": "30 days, 0:00:00",
+      "id": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/ContainerRegistry",
+      "name": "ContainerRegistry",
+      "pricingTier": "Free",
+      "replacedBy": [
+        "Containers"
+      ],
+      "subPlan": null,
+      "type": "Microsoft.Security/pricings"
+    },
+    {
+      "deprecated": null,
+      "enablementTime": null,
+      "extensions": null,
+      "freeTrialRemainingTime": "30 days, 0:00:00",
+      "id": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/KeyVaults",
+      "name": "KeyVaults",
+      "pricingTier": "Free",
+      "replacedBy": null,
+      "subPlan": null,
+      "type": "Microsoft.Security/pricings"
+    },
+    {
+      "deprecated": true,
+      "enablementTime": null,
+      "extensions": null,
+      "freeTrialRemainingTime": "30 days, 0:00:00",
+      "id": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/Dns",
+      "name": "Dns",
+      "pricingTier": "Free",
+      "replacedBy": [
+        "VirtualMachines"
+      ],
+      "subPlan": null,
+      "type": "Microsoft.Security/pricings"
+    },
+    {
+      "deprecated": null,
+      "enablementTime": null,
+      "extensions": null,
+      "freeTrialRemainingTime": "30 days, 0:00:00",
+      "id": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/Arm",
+      "name": "Arm",
+      "pricingTier": "Free",
+      "replacedBy": null,
+      "subPlan": null,
+      "type": "Microsoft.Security/pricings"
+    },
+    {
+      "deprecated": null,
+      "enablementTime": null,
+      "extensions": null,
+      "freeTrialRemainingTime": "30 days, 0:00:00",
+      "id": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/OpenSourceRelationalDatabases",
+      "name": "OpenSourceRelationalDatabases",
+      "pricingTier": "Free",
+      "replacedBy": null,
+      "subPlan": null,
+      "type": "Microsoft.Security/pricings"
+    },
+    {
+      "deprecated": null,
+      "enablementTime": null,
+      "extensions": null,
+      "freeTrialRemainingTime": "30 days, 0:00:00",
+      "id": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/CosmosDbs",
+      "name": "CosmosDbs",
+      "pricingTier": "Free",
+      "replacedBy": null,
+      "subPlan": null,
+      "type": "Microsoft.Security/pricings"
+    },
+    {
+      "deprecated": null,
+      "enablementTime": null,
+      "extensions": null,
+      "freeTrialRemainingTime": "30 days, 0:00:00",
+      "id": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/Containers",
+      "name": "Containers",
+      "pricingTier": "Free",
+      "replacedBy": null,
+      "subPlan": null,
+      "type": "Microsoft.Security/pricings"
+    },
+    {
+      "deprecated": null,
+      "enablementTime": "2024-11-01T00:43:35.359883+00:00",
+      "extensions": [
+        {
+          "additionalExtensionProperties": null,
+          "isEnabled": "False",
+          "name": "SensitiveDataDiscovery",
+          "operationStatus": null
+        },
+        {
+          "additionalExtensionProperties": null,
+          "isEnabled": "False",
+          "name": "ContainerRegistriesVulnerabilityAssessments",
+          "operationStatus": null
+        },
+        {
+          "additionalExtensionProperties": null,
+          "isEnabled": "False",
+          "name": "AgentlessDiscoveryForKubernetes",
+          "operationStatus": null
+        },
+        {
+          "additionalExtensionProperties": {
+            "ExclusionTags": "[]"
+          },
+          "isEnabled": "False",
+          "name": "AgentlessVmScanning",
+          "operationStatus": null
+        },
+        {
+          "additionalExtensionProperties": null,
+          "isEnabled": "False",
+          "name": "EntraPermissionsManagement",
+          "operationStatus": null
+        }
+      ],
+      "freeTrialRemainingTime": "29 days, 20:55:00",
+      "id": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/CloudPosture",
+      "name": "CloudPosture",
+      "pricingTier": "Standard",
+      "replacedBy": null,
+      "subPlan": null,
+      "type": "Microsoft.Security/pricings"
+    },
+    {
+      "deprecated": null,
+      "enablementTime": null,
+      "extensions": null,
+      "freeTrialRemainingTime": "30 days, 0:00:00",
+      "id": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/Api",
+      "name": "Api",
+      "pricingTier": "Free",
+      "replacedBy": null,
+      "subPlan": null,
+      "type": "Microsoft.Security/pricings"
+    }
+  ]
+}

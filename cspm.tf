@@ -1,37 +1,37 @@
 
-resource "azurerm_security_center_subscription_pricing" "pricingvm" {
-  tier          = "Standard"
-  resource_type = "VirtualMachines"
+# resource "azurerm_security_center_subscription_pricing" "pricingvm" {
+#   tier          = "Standard"
+#   resource_type = "VirtualMachines"
 
-  extension {
-    name = "AgentlessVmScanning"
-  }
+#   extension {
+#     name = "AgentlessVmScanning"
+#   }
 
-     extension {
-     name = "MdeDesignatedSubscription"
-   }
+#      extension {
+#      name = "MdeDesignatedSubscription"
+#    }
 
-}
+# }
 
-resource "azurerm_security_center_subscription_pricing" "pricingcp" {
-  tier          = "Standard"
-  resource_type = "CloudPosture"
+# resource "azurerm_security_center_subscription_pricing" "pricingcp" {
+#   tier          = "Standard"
+#   resource_type = "CloudPosture"
 
-  extension {
-    name = "AgentlessDiscoveryForKubernetes"
-  }
+#   extension {
+#     name = "AgentlessDiscoveryForKubernetes"
+#   }
 
 #   extension {
 #     name = "OnUploadMalwareScanning"
 #     }
   
-  extension {
-    name = "SensitiveDataDiscovery"
-  }
+#   extension {
+#     name = "SensitiveDataDiscovery"
+#   }
 
-    extension {
-    name = "EntraPermissionsManagement"
-  }
+#     extension {
+#     name = "EntraPermissionsManagement"
+#   }
 
 #     extension {
 #     name = "FileIntegrityMonitoring"
@@ -45,7 +45,7 @@ resource "azurerm_security_center_subscription_pricing" "pricingcp" {
 #     name = "AIPromptEvidence"
 #   }
 
-}
+# }
 
 /* resource "azurerm_subscription_template_deployment" "cspm" {
   name             = "cspm"
