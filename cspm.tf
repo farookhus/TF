@@ -1,9 +1,13 @@
 
-resource "azurerm_security_center_subscription_pricing" "pricing" {
+resource "azurerm_security_center_subscription_pricing" "pricingvm" {
   tier          = "Standard"
-  resource_type = [VirtualMachines,CloudPosture]
+  resource_type = "VirtualMachines"
 }
 
+resource "azurerm_security_center_subscription_pricing" "pricingcp" {
+  tier          = "Standard"
+  resource_type = "CloudPosture"
+}
 
 /* resource "azurerm_subscription_template_deployment" "cspm" {
   name             = "cspm"
