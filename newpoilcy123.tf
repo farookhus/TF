@@ -1,4 +1,4 @@
-resource "azurerm_subscription_template_deployment" "cspmtesting" {
+/* resource "azurerm_subscription_template_deployment" "cspmtesting" {
   name             = "cspmtesting"
   location         = "East US"
   template_content = <<TEMPLATE
@@ -42,4 +42,4 @@ resource "azurerm_subscription_template_deployment" "cspmtesting" {
      ]          
    }  
   TEMPLATE
-}
+} */
