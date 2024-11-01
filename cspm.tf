@@ -32,9 +32,9 @@ resource "azurerm_security_center_subscription_pricing" "pricingcp" {
     name = "EntraPermissionsManagement"
   }
 
-    extension {
-    name = "FileIntegrityMonitoring"
-  }
+#     extension {
+#     name = "FileIntegrityMonitoring"
+#   }
 
     extension {
     name = "ContainerSensor"
