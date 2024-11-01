@@ -47,7 +47,7 @@ resource "azurerm_security_center_subscription_pricing" "pricingcp" {
 
 }
 
-resource "azurerm_subscription_template_deployment" "cspm" {
+/* resource "azurerm_subscription_template_deployment" "cspm" {
   name             = "cspm"
   location         = "East US"
   template_content = <<TEMPLATE
@@ -77,4 +77,4 @@ resource "azurerm_subscription_template_deployment" "cspm" {
         ]            
      }   
 TEMPLATE
-}
+} */
