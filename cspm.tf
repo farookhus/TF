@@ -20,9 +20,9 @@ resource "azurerm_security_center_subscription_pricing" "pricingcp" {
     name = "SensitiveDataDiscovery"
   }
 
-  extension {
-    name = "MdeDesignatedSubscription"
-  }
+#   extension {
+#     name = "MdeDesignatedSubscription"
+#   }
 
   extension {
     name = "AgentlessVmScanning"
