@@ -12,9 +12,9 @@ resource "azurerm_security_center_subscription_pricing" "pricingcp" {
     name = "AgentlessDiscoveryForKubernetes"
   }
 
-  extension {
-    name = "OnUploadMalwareScanning"
-    }
+#   extension {
+#     name = "OnUploadMalwareScanning"
+#     }
   
   extension {
     name = "SensitiveDataDiscovery"
