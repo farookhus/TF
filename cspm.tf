@@ -2,6 +2,15 @@
 resource "azurerm_security_center_subscription_pricing" "pricingvm" {
   tier          = "Standard"
   resource_type = "VirtualMachines"
+
+  extension {
+    name = "AgentlessVmScanning"
+  }
+
+     extension {
+     name = "MdeDesignatedSubscription"
+   }
+
 }
 
 resource "azurerm_security_center_subscription_pricing" "pricingcp" {
@@ -18,14 +27,6 @@ resource "azurerm_security_center_subscription_pricing" "pricingcp" {
   
   extension {
     name = "SensitiveDataDiscovery"
-  }
-
-#   extension {
-#     name = "MdeDesignatedSubscription"
-#   }
-
-  extension {
-    name = "AgentlessVmScanning"
   }
 
     extension {
@@ -46,7 +47,7 @@ resource "azurerm_security_center_subscription_pricing" "pricingcp" {
 
 }
 
-/* resource "azurerm_subscription_template_deployment" "cspm" {
+resource "azurerm_subscription_template_deployment" "cspm" {
   name             = "cspm"
   location         = "East US"
   template_content = <<TEMPLATE
@@ -76,4 +77,4 @@ resource "azurerm_security_center_subscription_pricing" "pricingcp" {
         ]            
      }   
 TEMPLATE
-} */
+}
