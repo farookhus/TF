@@ -1,5 +1,5 @@
-resource "azurerm_subscription_template_deployment" "cspmnew" {
-  name             = "cspmnew"
+resource "azurerm_subscription_template_deployment" "cspmnew1" {
+  name             = "cspmnew1"
   location         = "East US"
   template_content = <<TEMPLATE
 
