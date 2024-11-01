@@ -4,6 +4,12 @@ resource "azurerm_security_center_subscription_pricing" "example" {
   resource_type = "VirtualMachines"
 }
 
+resource "azurerm_security_center_subscription_pricing" "example" {
+  tier          = "Standard"
+  resource_type = "CloudPosture"
+}
+
+
 /* resource "azurerm_subscription_template_deployment" "cspm" {
   name             = "cspm"
   location         = "East US"
