@@ -78,7 +78,80 @@ resource "azurerm_subscription_template_deployment" "defenderplannew" {
                         }
                       ]
                     }
+                  },
+                                    {
+                    "type": "Microsoft.Security/pricings",
+                    "apiVersion": "2023-01-01",
+                    "name": "Containers",
+                    "properties": {
+                      "pricingTier": "Standard",
+                      "extensions": [
+                        {
+                          "name": "ContainerRegistriesVulnerabilityAssessments",
+                          "isEnabled": "false"
+                        }
+                      ]
+                    }
+                  },
+                                    {
+                    "type": "Microsoft.Security/pricings",
+                    "apiVersion": "2023-01-01",
+                    "name": "SqlServerVirtualMachines",
+                    "properties": {
+                      "pricingTier": "Standard"
+                    }
+                  },
+                                    {
+                    "type": "Microsoft.Security/pricings",
+                    "apiVersion": "2018-06-01",
+                    "name": "AppServices",
+                    "properties": {
+                      "pricingTier": "Standard"
+                    }
+                  },
+                                    {
+                    "type": "Microsoft.Security/pricings",
+                    "apiVersion": "2023-01-01",
+                    "name": "SqlServers",
+                    "properties": {
+                      "pricingTier": "Standard"
+                    }
+                  },
+                  {
+                    "type": "Microsoft.Security/pricings",
+                    "apiVersion": "2023-01-01",
+                    "name": "KeyVaults",
+                    "properties": {
+                      "pricingTier": "Standard",
+                      "subPlan": "[parameters('subPlan')]"
+                    }
+                  },
+                                      {
+                    "type": "Microsoft.Security/pricings",
+                    "apiVersion": "2023-01-01",
+                    "name": "Arm",
+                    "properties": {
+                      "pricingTier": "Standard",
+                      "subPlan": "PerApiCall"
+                    }
+                  },
+                                    {
+                    "type": "Microsoft.Security/pricings",
+                    "apiVersion": "2018-06-01",
+                    "name": "OpenSourceRelationalDatabases",
+                    "properties": {
+                      "pricingTier": "Standard"
+                    }
+                  },
+                                    {
+                    "type": "Microsoft.Security/pricings",
+                    "apiVersion": "2018-06-01",
+                    "name": "CosmosDbs",
+                    "properties": {
+                      "pricingTier": "Standard"
+                    }
                   }
+                  
   ]
 }
 TEMPLATE
