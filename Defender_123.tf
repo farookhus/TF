@@ -52,7 +52,7 @@ resource "azurerm_subscription_template_deployment" "defenderplannew" {
                         },
                         {
                           "name": "MdeDesignatedSubscription",
-                          "isEnabled": "false"
+                          "isEnabled": "true"
                         }
                       ]
                     }
@@ -88,7 +88,7 @@ resource "azurerm_subscription_template_deployment" "defenderplannew" {
                       "extensions": [
                         {
                           "name": "ContainerRegistriesVulnerabilityAssessments",
-                          "isEnabled": "false"
+                          "isEnabled": "true"
                         }
                       ]
                     }
