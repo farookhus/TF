@@ -38,7 +38,7 @@ resource "azurerm_subscription_template_deployment" "defenderplannew" {
       ]
     }
   }
-  ]
+  ],
 }
 TEMPLATE
 
