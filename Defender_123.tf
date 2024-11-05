@@ -37,7 +37,13 @@ resource "azurerm_subscription_template_deployment" "defenderplannew" {
         }
       ]
     }
-  },
+  }
+  ]
+},
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources": [
 {
                     "type": "Microsoft.Security/pricings",
                     "apiVersion": "2023-01-01",
