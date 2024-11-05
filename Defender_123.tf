@@ -123,7 +123,7 @@ resource "azurerm_subscription_template_deployment" "defenderplannew" {
                     "name": "KeyVaults",
                     "properties": {
                       "pricingTier": "Standard",
-                      "subPlan": "[parameters('subPlan')]"
+                      "subPlan": "PerTransaction"
                     }
                   },
                                       {
