@@ -44,7 +44,7 @@ resource "azurerm_subscription_template_deployment" "defenderplan" {
                     "name": "VirtualMachines",
                     "properties": {
                       "pricingTier": "Standard",
-                      "subPlan": "P1",
+                      "subPlan": "P2",
                       "extensions": [
                         {
                           "name": "AgentlessVmScanning",
