@@ -36,8 +36,11 @@ resource "azurerm_subscription_template_deployment" "defenderplannew" {
           "isEnabled": "true"
         }
       ]
-    },
-                      {
+    }
+  }
+  ],
+  [
+                  {
                     "type": "Microsoft.Security/pricings",
                     "apiVersion": "2023-01-01",
                     "name": "VirtualMachines",
@@ -56,8 +59,7 @@ resource "azurerm_subscription_template_deployment" "defenderplannew" {
                       ]
                     }
                   }
-  }   
-  ]
+                ]
 }
 
 TEMPLATE
