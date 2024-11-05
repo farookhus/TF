@@ -56,6 +56,28 @@ resource "azurerm_subscription_template_deployment" "defenderplannew" {
                         }
                       ]
                     }
+                  },
+                                    {
+                    "type": "Microsoft.Security/pricings",
+                    "apiVersion": "2023-01-01",
+                    "name": "StorageAccounts",
+                    "properties": {
+                      "subPlan": "DefenderForStorageV2",
+                      "pricingTier": "Standard",
+                      "extensions": [
+                        {
+                    "name": "OnUploadMalwareScanning",
+                    "isEnabled": "true",
+                    "additionalExtensionProperties": {
+                      "CapGBPerMonthPerStorageAccount": "-1"
+                    }
+                  },
+                        {
+                          "name": "SensitiveDataDiscovery",
+                          "isEnabled": "true"
+                        }
+                      ]
+                    }
                   }
   ]
 }
