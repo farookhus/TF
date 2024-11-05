@@ -36,7 +36,26 @@ resource "azurerm_subscription_template_deployment" "defenderplannew" {
           "isEnabled": "true"
         }
       ]
-    }
+    },
+                      {
+                    "type": "Microsoft.Security/pricings",
+                    "apiVersion": "2023-01-01",
+                    "name": "VirtualMachines",
+                    "properties": {
+                      "pricingTier": "Standard",
+                      "subPlan": "P2",
+                      "extensions": [
+                        {
+                          "name": "AgentlessVmScanning",
+                          "isEnabled": "true"
+                        },
+                        {
+                          "name": "MdeDesignatedSubscription",
+                          "isEnabled": "false"
+                        }
+                      ]
+                    }
+                  }
   }   
   ]
 }
