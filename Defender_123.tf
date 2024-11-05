@@ -1,6 +1,6 @@
 
-/* resource "azurerm_subscription_template_deployment" "vmpricing" {
-  name             = "vmpricing"
+resource "azurerm_subscription_template_deployment" "defenderplan" {
+  name             = "defenderplan"
   location         = "East US"
   template_content = <<TEMPLATE
 
@@ -8,14 +8,55 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "resources": [
-      {
-          "type": "Microsoft.Security/pricings",
-          "apiVersion": "2018-06-01",
-          "name": "VirtualMachines",
-          "properties":{
-              "pricingTier": "Standard"
-          }
-      }      
+     {
+    "type": "Microsoft.Security/pricings",
+    "apiVersion": "2023-01-01",
+    "name": "CloudPosture",
+    "properties": {
+      "pricingTier": "Standard",
+      "extensions": [
+        {
+          "name": "SensitiveDataDiscovery",
+          "isEnabled": "true"
+        },
+        {
+          "name": "ContainerRegistriesVulnerabilityAssessments",
+          "isEnabled": "true"
+        },
+        {
+          "name": "AgentlessDiscoveryForKubernetes",
+          "isEnabled": "true"
+        },
+        {
+          "name": "AgentlessVmScanning",
+          "isEnabled": "true"
+        },
+        {
+          "name": "EntraPermissionsManagement",
+          "isEnabled": "true"
+        }
+      ]
+    }
+  },
+                    {
+                    "type": "Microsoft.Security/pricings",
+                    "apiVersion": "2023-01-01",
+                    "name": "VirtualMachines",
+                    "properties": {
+                      "pricingTier": "Standard",
+                      "subPlan": "P1",
+                      "extensions": [
+                        {
+                          "name": "AgentlessVmScanning",
+                          "isEnabled": "true"
+                        },
+                        {
+                          "name": "MdeDesignatedSubscription",
+                          "isEnabled": "false"
+                        }
+                      ]
+                    }
+                  }   
   ],
   "outputs": {}
 }
@@ -24,32 +65,3 @@ TEMPLATE
 
 }
 
-data "azurerm_management_group" "vmpricingmgmt" {
-  name = "Farook-mgmt"
-}
-
-resource "azurerm_management_group_template_deployment" "vmpricingmgmt" {
-  name                = "vmpricingmgmt"
-  location            = "East US"
-  management_group_id = data.azurerm_management_group.vmpricingmgmt.id
-  template_content = <<TEMPLATE
-
-{
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
-  "resources": [
-      {
-          "type": "Microsoft.Security/pricings",
-          "apiVersion": "2018-06-01",
-          "name": "VirtualMachines",
-          "properties":{
-              "pricingTier": "Standard"
-          }
-      }      
-  ],
-  "outputs": {}
-}
-
-TEMPLATE
-
-} */

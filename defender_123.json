@@ -1,0 +1,52 @@
+"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+"contentVersion": "1.0.0.0",
+"parameters": {
+  "isSensitiveDataDiscoveryEnabled": {
+    "type": "String"
+  },
+  "isContainerRegistriesVulnerabilityAssessmentsEnabled": {
+    "type": "String"
+  },
+  "isAgentlessDiscoveryForKubernetesEnabled": {
+    "type": "String"
+  },
+  "isAgentlessVmScanningEnabled": {
+    "type": "String"
+  },
+  "isEntraPermissionsManagementEnabled": {
+    "type": "String"
+  }
+},
+"resources": [
+  {
+    "type": "Microsoft.Security/pricings",
+    "apiVersion": "2023-01-01",
+    "name": "CloudPosture",
+    "properties": {
+      "pricingTier": "Standard",
+      "extensions": [
+        {
+          "name": "SensitiveDataDiscovery",
+          "isEnabled": "[parameters('isSensitiveDataDiscoveryEnabled')]"
+        },
+        {
+          "name": "ContainerRegistriesVulnerabilityAssessments",
+          "isEnabled": "[parameters('isContainerRegistriesVulnerabilityAssessmentsEnabled')]"
+        },
+        {
+          "name": "AgentlessDiscoveryForKubernetes",
+          "isEnabled": "[parameters('isAgentlessDiscoveryForKubernetesEnabled')]"
+        },
+        {
+          "name": "AgentlessVmScanning",
+          "isEnabled": "[parameters('isAgentlessVmScanningEnabled')]"
+        },
+        {
+          "name": "EntraPermissionsManagement",
+          "isEnabled": "[parameters('isEntraPermissionsManagementEnabled')]"
+        }
+      ]
+    }
+  }
+]
+}
