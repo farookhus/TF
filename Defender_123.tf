@@ -150,13 +150,6 @@ resource "azurerm_subscription_template_deployment" "defenderplannew" {
                     "properties": {
                       "pricingTier": "Standard"
                     }
-                  },
-                  {
-                    "type": "Microsoft.Security/pricings@2024-01-01",
-                    "name": "DefenderCSPMPlan",
-                    "properties": {
-                    "pricingTier": "Standard"
-                   }
                   }                  
   ]
 }
