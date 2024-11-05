@@ -18,11 +18,11 @@ resource "azurerm_subscription_template_deployment" "defenderplannew1" {
                       "extensions": [
                         {
                           "name": "AgentlessVmScanning",
-                          "isEnabled": "true"
+                          "isEnabled": "True"
                         },
                         {
                           "name": "MdeDesignatedSubscription",
-                          "isEnabled": "true"
+                          "isEnabled": "True"
                         }
                       ]
                     }
@@ -44,7 +44,7 @@ resource "azurerm_subscription_template_deployment" "defenderplannew1" {
                   },
                         {
                           "name": "SensitiveDataDiscovery",
-                          "isEnabled": "true"
+                          "isEnabled": "True"
                         }
                       ]
                     }
@@ -130,11 +130,11 @@ resource "azurerm_subscription_template_deployment" "defenderplannew1" {
       "extensions": [
         {
           "name": "AgentlessDiscoveryForKubernetes",
-          "isEnabled": "true"
+          "isEnabled": "True"
         },
         {
           "name": "EntraPermissionsManagement",
-          "isEnabled": "true"
+          "isEnabled": "True"
         }
       ]
     }
