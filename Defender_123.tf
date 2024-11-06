@@ -1,6 +1,6 @@
 
-resource "azurerm_subscription_template_deployment" "defenderplannew12" {
-  name             = "defenderplannew12"
+resource "azurerm_subscription_template_deployment" "defenderplannew123" {
+  name             = "defenderplannew123"
   location         = "East US"
   template_content = <<TEMPLATE
 
@@ -12,6 +12,7 @@ resource "azurerm_subscription_template_deployment" "defenderplannew12" {
                     "type": "Microsoft.Security/pricings",
                     "apiVersion": "2023-01-01",
                     "name": "VirtualMachines",
+                    "enforce": "True",
                     "properties": {
                       "pricingTier": "Standard",
                       "subPlan": "P2",
@@ -31,6 +32,7 @@ resource "azurerm_subscription_template_deployment" "defenderplannew12" {
                     "type": "Microsoft.Security/pricings",
                     "apiVersion": "2023-01-01",
                     "name": "StorageAccounts",
+                    "enforce": "True",
                     "properties": {
                       "subPlan": "DefenderForStorageV2",
                       "pricingTier": "Standard",
@@ -53,6 +55,7 @@ resource "azurerm_subscription_template_deployment" "defenderplannew12" {
                     "type": "Microsoft.Security/pricings",
                     "apiVersion": "2023-01-01",
                     "name": "Containers",
+                    "enforce": "True",
                     "properties": {
                       "pricingTier": "Standard",
                       "extensions": [
