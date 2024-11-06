@@ -11,8 +11,7 @@ resource "azurerm_subscription_template_deployment" "defenderplannew123" {
                     {
                     "type": "Microsoft.Security/pricings",
                     "apiVersion": "2023-01-01",
-                    "name": "VirtualMachines",
-                    "enforce": "True",
+                    "name": "VirtualMachines",                    
                     "properties": {
                       "pricingTier": "Standard",
                       "subPlan": "P2",
@@ -24,6 +23,10 @@ resource "azurerm_subscription_template_deployment" "defenderplannew123" {
                         {
                           "name": "MdeDesignatedSubscription",
                           "isEnabled": "True"
+                        },
+                        {
+                          "name": "FileIntegrityMonitoring",
+                          "isEnabled": "True"
                         }
                       ]
                     }
@@ -31,8 +34,7 @@ resource "azurerm_subscription_template_deployment" "defenderplannew123" {
                                     {
                     "type": "Microsoft.Security/pricings",
                     "apiVersion": "2023-01-01",
-                    "name": "StorageAccounts",
-                    "enforce": "True",
+                    "name": "StorageAccounts",                    
                     "properties": {
                       "subPlan": "DefenderForStorageV2",
                       "pricingTier": "Standard",
@@ -54,13 +56,20 @@ resource "azurerm_subscription_template_deployment" "defenderplannew123" {
                                     {
                     "type": "Microsoft.Security/pricings",
                     "apiVersion": "2023-01-01",
-                    "name": "Containers",
-                    "enforce": "True",
+                    "name": "Containers",                    
                     "properties": {
                       "pricingTier": "Standard",
                       "extensions": [
                         {
                           "name": "ContainerRegistriesVulnerabilityAssessments",
+                          "isEnabled": "true"
+                        },
+                                                {
+                          "name": "AgentlessDiscoveryForKubernetes",
+                          "isEnabled": "true"
+                        },
+                                                {
+                          "name": "ContainerSensor",
                           "isEnabled": "true"
                         }
                       ]
