@@ -127,6 +127,7 @@ resource "azurerm_subscription_template_deployment" "defenderplannew12" {
     "name": "CloudPosture",
     "properties": {
       "pricingTier": "Standard",
+      "enforce": "True",
       "extensions": [
               {
           "name": "SensitiveDataDiscovery",
