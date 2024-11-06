@@ -17,11 +17,11 @@ resource "azurerm_subscription_template_deployment" "newdefender123456" {
                       "extensions": [
                         {
                           "name": "AgentlessVmScanning",
-                          "isEnabled": "True"
+                          "isEnabled": "False"
                         },
                         {
                           "name": "MdeDesignatedSubscription",
-                          "isEnabled": "True"
+                          "isEnabled": "False"
                         }
                       ]
                     }
@@ -36,14 +36,14 @@ resource "azurerm_subscription_template_deployment" "newdefender123456" {
                       "extensions": [
                         {
                     "name": "OnUploadMalwareScanning",
-                    "isEnabled": "true",
+                    "isEnabled": "False",
                     "additionalExtensionProperties": {
                       "CapGBPerMonthPerStorageAccount": "-1"
                     }
                   },
                         {
                           "name": "SensitiveDataDiscovery",
-                          "isEnabled": "True"
+                          "isEnabled": "False"
                         }
                       ]
                     }
@@ -57,15 +57,15 @@ resource "azurerm_subscription_template_deployment" "newdefender123456" {
                       "extensions": [
                         {
                           "name": "ContainerRegistriesVulnerabilityAssessments",
-                          "isEnabled": "true"
+                          "isEnabled": "False"
                         },
                                                 {
                           "name": "AgentlessDiscoveryForKubernetes",
-                          "isEnabled": "true"
+                          "isEnabled": "False"
                         },
                                                 {
                           "name": "ContainerSensor",
-                          "isEnabled": "true"
+                          "isEnabled": "False"
                         }
                       ]
                     }
@@ -134,27 +134,27 @@ resource "azurerm_subscription_template_deployment" "newdefender123456" {
     "name": "CloudPosture",
     "properties": {
       "pricingTier": "Standard",
-      "enforce": "True",
+      "enforce": "False",
       "extensions": [
               {
           "name": "SensitiveDataDiscovery",
-          "isEnabled": "True"
+          "isEnabled": "False"
         },
                 {
           "name": "ContainerRegistriesVulnerabilityAssessments",
-          "isEnabled": "True"
+          "isEnabled": "False"
         },
                 {
           "name": "AgentlessDiscoveryForKubernetes",
-          "isEnabled": "True"
+          "isEnabled": "False"
         },
         {
           "name": "AgentlessVmScanning",
-          "isEnabled": "True"
+          "isEnabled": "False"
         },
         {
           "name": "EntraPermissionsManagement",
-          "isEnabled": "True"
+          "isEnabled": "False"
         }
       ]
     }
