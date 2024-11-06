@@ -142,11 +142,11 @@ resource "azurerm_subscription_template_deployment" "newdefender123456" {
         },
                 {
           "name": "ContainerRegistriesVulnerabilityAssessments",
-          "isEnabled": "False"
+          "isEnabled": "True"
         },
                 {
           "name": "AgentlessDiscoveryForKubernetes",
-          "isEnabled": "False"
+          "isEnabled": "True"
         },
         {
           "name": "AgentlessVmScanning",
@@ -154,7 +154,7 @@ resource "azurerm_subscription_template_deployment" "newdefender123456" {
         },
         {
           "name": "EntraPermissionsManagement",
-          "isEnabled": "False"
+          "isEnabled": "True"
         }
       ]
     }
