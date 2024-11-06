@@ -12,7 +12,6 @@ resource "azurerm_subscription_template_deployment" "defenderplannew12" {
                     "type": "Microsoft.Security/pricings",
                     "apiVersion": "2023-01-01",
                     "name": "VirtualMachines",
-                    "enforce": 
                     "properties": {
                       "pricingTier": "Standard",
                       "subPlan": "P2",
