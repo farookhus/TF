@@ -1,6 +1,6 @@
 
-resource "azurerm_subscription_template_deployment" "newdefender123" {
-  name             = "newdefender123"
+resource "azurerm_subscription_template_deployment" "newdefender1234" {
+  name             = "newdefender1234"
   location         = "East US"
   template_content = <<TEMPLATE
 
