@@ -23,11 +23,6 @@ resource "azurerm_subscription_template_deployment" "defenderplannew1234" {
                         {
                           "name": "MdeDesignatedSubscription",
                           "isEnabled": "True"
-                        },
-                        {
-                          "name": "FileIntegrityMonitoring",
-                          "isEnabled": "True",
-                          "additionalExtensionProperties": "null"
                         }
                       ]
                     }
