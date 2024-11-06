@@ -17,11 +17,11 @@ resource "azurerm_subscription_template_deployment" "newdefender123456" {
                       "extensions": [
                         {
                           "name": "AgentlessVmScanning",
-                          "isEnabled": "False"
+                          "isEnabled": "True"
                         },
                         {
                           "name": "MdeDesignatedSubscription",
-                          "isEnabled": "False"
+                          "isEnabled": "True"
                         }
                       ]
                     }
@@ -43,7 +43,7 @@ resource "azurerm_subscription_template_deployment" "newdefender123456" {
                   },
                         {
                           "name": "SensitiveDataDiscovery",
-                          "isEnabled": "False"
+                          "isEnabled": "True"
                         }
                       ]
                     }
@@ -57,15 +57,15 @@ resource "azurerm_subscription_template_deployment" "newdefender123456" {
                       "extensions": [
                         {
                           "name": "ContainerRegistriesVulnerabilityAssessments",
-                          "isEnabled": "False"
+                          "isEnabled": "True"
                         },
                                                 {
                           "name": "AgentlessDiscoveryForKubernetes",
-                          "isEnabled": "False"
+                          "isEnabled": "True"
                         },
                                                 {
                           "name": "ContainerSensor",
-                          "isEnabled": "False"
+                          "isEnabled": "True"
                         }
                       ]
                     }
@@ -134,27 +134,27 @@ resource "azurerm_subscription_template_deployment" "newdefender123456" {
     "name": "CloudPosture",
     "properties": {
       "pricingTier": "Standard",
-      "enforce": "False",
+      "enforce": "True",
       "extensions": [
               {
           "name": "SensitiveDataDiscovery",
-          "isEnabled": "False"
+          "isEnabled": "True"
         },
                 {
           "name": "ContainerRegistriesVulnerabilityAssessments",
-          "isEnabled": "False"
+          "isEnabled": "True"
         },
                 {
           "name": "AgentlessDiscoveryForKubernetes",
-          "isEnabled": "False"
+          "isEnabled": "True"
         },
         {
           "name": "AgentlessVmScanning",
-          "isEnabled": "False"
+          "isEnabled": "True"
         },
         {
           "name": "EntraPermissionsManagement",
-          "isEnabled": "False"
+          "isEnabled": "True"
         }
       ]
     }
