@@ -12,6 +12,7 @@ resource "azurerm_subscription_template_deployment" "defenderplannew1" {
                     "type": "Microsoft.Security/pricings",
                     "apiVersion": "2023-01-01",
                     "name": "VirtualMachines",
+                    "enforce": 
                     "properties": {
                       "pricingTier": "Standard",
                       "subPlan": "P2",
@@ -128,8 +129,20 @@ resource "azurerm_subscription_template_deployment" "defenderplannew1" {
     "properties": {
       "pricingTier": "Standard",
       "extensions": [
-        {
+              {
+          "name": "SensitiveDataDiscovery",
+          "isEnabled": "True"
+        },
+                {
+          "name": "ContainerRegistriesVulnerabilityAssessments",
+          "isEnabled": "True"
+        },
+                {
           "name": "AgentlessDiscoveryForKubernetes",
+          "isEnabled": "True"
+        },
+        {
+          "name": "AgentlessVmScanning",
           "isEnabled": "True"
         },
         {
