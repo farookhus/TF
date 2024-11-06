@@ -134,6 +134,7 @@ resource "azurerm_subscription_template_deployment" "newdefender123456" {
     "name": "CloudPosture",
     "properties": {
       "pricingTier": "Standard",
+      "enforce": "True",
       "extensions": [
               {
           "name": "SensitiveDataDiscovery",
@@ -141,7 +142,7 @@ resource "azurerm_subscription_template_deployment" "newdefender123456" {
         },
                 {
           "name": "ContainerRegistriesVulnerabilityAssessments",
-          "isEnabled": "True"
+          "isEnabled": "False"
         },
                 {
           "name": "AgentlessDiscoveryForKubernetes",
@@ -153,7 +154,7 @@ resource "azurerm_subscription_template_deployment" "newdefender123456" {
         },
         {
           "name": "EntraPermissionsManagement",
-          "isEnabled": "True"
+          "isEnabled": "False"
         }
       ]
     }
