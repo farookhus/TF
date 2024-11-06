@@ -36,7 +36,7 @@ resource "azurerm_subscription_template_deployment" "newdefender123456" {
                       "extensions": [
                         {
                     "name": "OnUploadMalwareScanning",
-                    "isEnabled": "False",
+                    "isEnabled": "True",
                     "additionalExtensionProperties": {
                       "CapGBPerMonthPerStorageAccount": "-1"
                     }
