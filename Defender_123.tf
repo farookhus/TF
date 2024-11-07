@@ -150,7 +150,7 @@
         },
         {
           "name": "AgentlessVmScanning",
-          "isEnabled": "True"
+          "isEnabled": "False"
         },
         {
           "name": "EntraPermissionsManagement",
