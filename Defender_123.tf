@@ -1,6 +1,6 @@
   resource "azurerm_subscription_template_deployment" "newdefender1234567" {
   name             = "newdefender1234567"
-  location         = "East US"
+  location         = "South Central US"
   template_content = <<TEMPLATE
 
 {
@@ -150,7 +150,7 @@
         },
         {
           "name": "AgentlessVmScanning",
-          "isEnabled": "True"
+          "isEnabled": "False"
         },
         {
           "name": "EntraPermissionsManagement",
