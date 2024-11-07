@@ -136,12 +136,3 @@ resource "azapi_resource" "symbolicname" {
 } */
 
 
-{
-  "type": "Microsoft.Security/defenderPlans",
-  "apiVersion": "2021-01-01",
-  "name": "DefenderCSPM",
-  "properties": {
-    "planType": "CSPM",
-    "isEnabled": true
-  }
-}
