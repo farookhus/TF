@@ -134,7 +134,7 @@
     "name": "CloudPosture",
     "properties": {
       "pricingTier": "Standard",
-      "enforce": "True",
+      "enforce": "False",
       "extensions": [
               {
           "name": "SensitiveDataDiscovery",
