@@ -7,16 +7,7 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "resources": [
-  {
-  "type": "Microsoft.Security/defenderPlans",
-  "apiVersion": "2021-01-01",
-  "name": "DefenderCSPM",
-  "properties": {
-    "planType": "CSPM",
-    "isEnabled": true
-  }
-},
-                    {
+                     {
                     "type": "Microsoft.Security/pricings",
                     "apiVersion": "2023-01-01",
                     "name": "VirtualMachines",                    
