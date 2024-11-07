@@ -1,12 +1,21 @@
   resource "azurerm_subscription_template_deployment" "newdefender1234567" {
   name             = "newdefender1234567"
-  location         = "South Central US"
+  location         = "East US"
   template_content = <<TEMPLATE
 
 {
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "resources": [
+  {
+  "type": "Microsoft.Security/defenderPlans",
+  "apiVersion": "2021-01-01",
+  "name": "DefenderCSPM",
+  "properties": {
+    "planType": "CSPM",
+    "isEnabled": true
+  }
+},
                     {
                     "type": "Microsoft.Security/pricings",
                     "apiVersion": "2023-01-01",
@@ -150,7 +159,7 @@
         },
         {
           "name": "AgentlessVmScanning",
-          "isEnabled": "False"
+          "isEnabled": "True"
         },
         {
           "name": "EntraPermissionsManagement",

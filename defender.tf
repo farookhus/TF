@@ -134,3 +134,14 @@ resource "azapi_resource" "symbolicname" {
 /* resource "azurerm_security_center_storage_defender" "sfs_defender" {
   storage_account_id = azurerm_storage_account.sfs_defender.id
 } */
+
+
+{
+  "type": "Microsoft.Security/defenderPlans",
+  "apiVersion": "2021-01-01",
+  "name": "DefenderCSPM",
+  "properties": {
+    "planType": "CSPM",
+    "isEnabled": true
+  }
+}
