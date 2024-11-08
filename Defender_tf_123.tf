@@ -1,4 +1,4 @@
-resource "azurerm_security_center_subscription_pricing" "Cloudposture" {
+resource "azurerm_security_center_subscription_pricing" "def_CloudPosture" {
   tier          = "Standard"
   resource_type = "CloudPosture"
 
@@ -21,9 +21,7 @@ resource "azurerm_security_center_subscription_pricing" "Cloudposture" {
     name = "SensitiveDataDiscovery"
   }
 
-    extension {
+      extension {
     name = "EntraPermissionsManagement"
   }
 }
-
-resource "azurerm_security_center_subscription_pricing" "Cloudposture"
