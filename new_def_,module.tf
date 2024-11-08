@@ -3,3 +3,10 @@ module "mdc-defender-plans-azure" {
   version = "2.0.0"
 }
 
+module "mdc_plans_enable" {
+    source = "../.."
+    mdc_plans_list = [
+        "CloudPosture"
+   ]
+
+}
