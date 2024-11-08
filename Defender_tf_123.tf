@@ -1,1 +1,0 @@
-terraform import azurerm_security_center_subscription_pricing.def_CloudPosture /subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/pricings/CloudPosture
