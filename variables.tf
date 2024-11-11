@@ -5,17 +5,17 @@ variable "enable_telemetry" {
 variable "mdc_plans_list" {
   type = set(string)
   default = [
-    # "AppServices",
-    # "Arm",
-    # "Containers",
-    # "KeyVaults",
-    # "OpenSourceRelationalDatabases",
-    # "SqlServers",
-    # "SqlServerVirtualMachines",
-    # "CosmosDbs",
-    # "StorageAccounts",
-    # "VirtualMachines",
-    # "Api",
+     "AppServices",
+     "Arm",
+     "Containers",
+     "KeyVaults",
+     "OpenSourceRelationalDatabases",
+     "SqlServers",
+     "SqlServerVirtualMachines",
+     "CosmosDbs",
+     "StorageAccounts",
+     "VirtualMachines",
+     "Api",
   ]
   description = "(Optional) Set of all MDC plans"
 }
