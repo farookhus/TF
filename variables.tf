@@ -7,14 +7,14 @@ variable "mdc_plans_list" {
   default = [
     # "AppServices",
     # "Arm",
-     "CloudPosture",
+    # "CloudPosture",
     # "Containers",
     # "KeyVaults",
     # "OpenSourceRelationalDatabases",
     # "SqlServers",
     # "SqlServerVirtualMachines",
     # "CosmosDbs",
-     "StorageAccounts",
+    # "StorageAccounts",
     # "VirtualMachines",
     # "Api",
   ]
