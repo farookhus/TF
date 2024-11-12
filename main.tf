@@ -75,9 +75,3 @@ module "mdc-defender-plans-azure" {
   enable_telemetry = var.enable_telemetry
 }
 
-/* module "mdc_plans_enable" {
-  source           = "./terraform-azure-mdc-defender-plans-azure/mdc_plans_enable"
-  mdc_plans_list   = var.mdc_plans_list
-  subplans         = var.subplans
-  enable_telemetry = var.enable_telemetry
-} */
