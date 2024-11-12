@@ -14,7 +14,7 @@ variable "mdc_plans_list" {
     # "SqlServers",
     # "SqlServerVirtualMachines",
     # "CosmosDbs",
-    # "StorageAccounts",
+     "StorageAccounts",
     # "VirtualMachines",
     # "Api",
   ]
