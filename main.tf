@@ -14,7 +14,7 @@ provider "azurerm" {
   features {}
 } */
 
- terraform {
+/*  terraform {
    required_providers {
      azapi = {
        source = "Azure/azapi"
@@ -42,9 +42,34 @@ terraform {
       name = "common"
     }
   }
+} */
+
+terraform {
+  required_version = ">= 1.2"
+
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = ">= 3.7.0, < 4.0"
+    }
+    modtm = {
+      source  = "Azure/modtm"
+      version = ">= 0.1.8, < 1.0"
+    }
+  }
 }
 
-module "mdc-defender-plans-azure_example_single_subscription" {
-  source  = "mdc-defender-plans-azure/examples/single_subscription"
-  version = "2.0.0"
+provider "azurerm" {
+  features {}
+}
+
+provider "modtm" {
+  enabled = false
+}
+
+module "mdc_plans_enable" {
+  source           = "../.."
+  mdc_plans_list   = var.mdc_plans_list
+  subplans         = var.subplans
+  enable_telemetry = var.enable_telemetry
 }
