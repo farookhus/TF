@@ -67,7 +67,7 @@ provider "modtm" {
   enabled = false
 }
 
-module "mdc_plans_enable" {
+module "mdc_plans" {
   source           = "./terraform-azure-mdc-defender-plans-azure/mdc_plans_enable"
   mdc_plans_list   = var.mdc_plans_list
   subplans         = var.subplans
