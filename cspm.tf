@@ -1,5 +1,5 @@
 
- resource "azurerm_security_center_subscription_pricing" "pricingvm" {
+/*  resource "azurerm_security_center_subscription_pricing" "pricingvm" {
    tier          = "Standard"
    resource_type = "VirtualMachines"
 
@@ -11,7 +11,7 @@
       name = "MdeDesignatedSubscription"
     }
 
- }
+ } */
 
  resource "azurerm_security_center_subscription_pricing" "pricingcp" {
    tier          = "Standard"
@@ -29,9 +29,6 @@
      name = "EntraPermissionsManagement"
    }
 
-     extension {
-     name = "ContainerSensor"
-   }
 
  }
 
