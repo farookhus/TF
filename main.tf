@@ -45,6 +45,6 @@ terraform {
 }
 
 module "mdc-defender-plans-azure_example_single_subscription" {
-  source  = "Azure/mdc-defender-plans-azure/azure//examples/single_subscription"
+  source  = "mdc-defender-plans-azure/examples/single_subscription"
   version = "2.0.0"
 }
