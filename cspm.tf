@@ -28,7 +28,13 @@
      extension {
      name = "EntraPermissionsManagement"
    }
+     extension {
+     name = "AgentlessVmScanning"
+   }
 
+        extension {
+     name = "ContainerRegistriesVulnerabilityAssessments"
+   }
 
  }
 
