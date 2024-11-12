@@ -67,7 +67,7 @@ provider "modtm" {
   enabled = false
 }
 
-module "mdc_plans_enable" {
+module "mdc_plans" {
   source           = "."
   mdc_plans_list   = var.mdc_plans_list
   subplans         = var.subplans
