@@ -44,6 +44,8 @@ terraform {
   }
 } */
 
+############## Block for the microsoft defender module ######################33
+
 terraform {
   required_version = ">= 1.2"
 
@@ -75,3 +77,4 @@ module "mdc-defender-plans-azure" {
   enable_telemetry = var.enable_telemetry
 }
 
+#####################################################################
