@@ -1,4 +1,4 @@
-
+/* 
  resource "azurerm_security_center_subscription_pricing" "pricingcp" {
    tier          = "Standard"
    resource_type = "CloudPosture"
@@ -97,4 +97,4 @@
    tier          = "Standard"
    resource_type = "CosmosDbs"
 
- } 
+ }  */
