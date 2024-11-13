@@ -87,7 +87,7 @@
 
  } 
 
-   resource "azurerm_security_center_subscription_pricing" "pricingosrd" {
+   resource "azurerm_security_center_subscription_pricing" "pricingOpenSourceRelationalDatabases" {
    tier          = "Standard"
    resource_type = "OpenSourceRelationalDatabases"
 
