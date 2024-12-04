@@ -79,6 +79,6 @@ module "mdc-defender-plans-azure" {
 
 
 module "defender" {
-source           = "../../modules/defender"
+source           = "./modules/defender"
 }
 #####################################################################
