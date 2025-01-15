@@ -1,0 +1,27 @@
+
+provider "azurerm" {
+    alias           = "sub0"
+    subscription_id = ""
+    features {}
+}
+
+module "mdc_plans_enable_0" {
+    source                  = "../../../"
+    mdc_plans_list          = ["Api","AppServices","Arm","CloudPosture","Containers","CosmosDbs","KeyVaults","OpenSourceRelationalDatabases","SqlServerVirtualMachines","SqlServers","StorageAccounts","VirtualMachines"]
+    subplans                = {"Api":"P1","Arm":"PerSubscription","KeyVaults":"PerKeyVault","VirtualMachines":"P2"}
+    providers               = { azurerm = azurerm.sub0 }
+}
+
+provider "azurerm" {
+    alias           = "sub0"
+    subscription_id = ""
+    features {}
+}
+
+module "mdc_plans_enable_0" {
+    source                  = "../../../"
+    mdc_plans_list          = ["Api","AppServices","Arm","CloudPosture","Containers","CosmosDbs","KeyVaults","OpenSourceRelationalDatabases","SqlServerVirtualMachines","SqlServers","StorageAccounts","VirtualMachines"]
+    subplans                = {"Api":"P1","Arm":"PerSubscription","KeyVaults":"PerKeyVault","VirtualMachines":"P2"}
+    providers               = { azurerm = azurerm.sub0 }
+}
+
