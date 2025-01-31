@@ -1,3 +1,5 @@
+  /*
+  
   resource "azurerm_subscription_template_deployment" "newdefender12345678" {
   name             = "newdefender12345678"
   location         = "East US"
@@ -165,4 +167,5 @@ TEMPLATE
 
 }
 
+*/
 
