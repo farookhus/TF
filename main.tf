@@ -18,7 +18,7 @@ provider "azurerm" {
    required_providers {
      azapi = {
        source = "Azure/azapi"
-       version = "=2.0.1"
+       version = "=2.2.0"
      }
          azurerm = {
       source  = "hashicorp/azurerm"
@@ -54,6 +54,10 @@ terraform {
       source  = "hashicorp/azurerm"
       version = ">= 3.7.0, < 4.0"
     }
+    azapi = {
+    source = "Azure/azapi"
+    version = "=2.2.0"
+     }
     modtm = {
       source  = "Azure/modtm"
       version = ">= 0.1.8, < 1.0"
@@ -69,6 +73,7 @@ provider "modtm" {
   enabled = false
 }
 
+/*
 module "mdc-defender-plans-azure" {
   source           = "Azure/mdc-defender-plans-azure/azure"
   version          = "2.0.0"
@@ -76,7 +81,7 @@ module "mdc-defender-plans-azure" {
   subplans         = var.subplans
   enable_telemetry = var.enable_telemetry
 }
-
+*/
 
 module "defender" {
  source           = "./modules/defender"
