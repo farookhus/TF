@@ -4,7 +4,7 @@ resource "azapi_update_resource" "malwaresetting" {
 
    body = {
     "properties": {
-        "workspaceId": "/subscriptions/{subscriptionId}/resourcegroups/{resourceGroup}/providers/microsoft.operationalinsights/workspaces/{workspaceName}",
+        "workspaceId": "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/resourcegroups/test/providers/microsoft.operationalinsights/workspaces/storagewks",
         "logs": [
             {
                 "category": "ScanResults",
