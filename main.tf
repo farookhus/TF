@@ -82,9 +82,5 @@ module "mdc-defender-plans-azure" {
   enable_telemetry = var.enable_telemetry
 }
 */
-/*
-module "defender" {
- source           = "./modules/defender"
- }
- /*
+
 #####################################################################
