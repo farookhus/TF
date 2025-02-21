@@ -29,7 +29,7 @@ resource "azapi_update_resource" "endpointprotection" {
    body = {
     "kind": "DataExportSettings",
     "properties": {
-    "enabled": false
+    "enabled": true
     }
  }
 }
