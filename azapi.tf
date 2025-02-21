@@ -23,7 +23,7 @@ resource "azapi_update_resource" "malwaresetting" {
 */
 
 resource "azapi_update_resource" "endpointprotection" {
-   type        = "Microsoft.Security/settings"
+   type        = "Microsoft.Security/settings@2022-05-01"
    resource_id = "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/settings/WDATP"
 
    body = {
