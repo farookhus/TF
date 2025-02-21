@@ -27,12 +27,9 @@ resource "azapi_update_resource" "endpointprotection" {
    resource_id = "/subscriptions/a682efd9-27e6-4af8-9d10-574e2a214eab/providers/Microsoft.Security/settings/WDATP"
 
    body = {
-    "properties": {
     "kind": "DataExportSettings",
     "properties": {
     "enabled": false
     }
-}
-
  }
 }
